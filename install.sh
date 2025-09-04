@@ -36,7 +36,7 @@ print_status "Starting ThinkPad rice installation..."
 
 # Install drivers and system components
 print_status "Installing drivers and system components..."
-sudo pacman -S --needed mesa vulkan-intel sof-firmware tlp tlp-rdw acpi_call \
+sudo pacman -S --needed mesa vulkan-intel sof-firmware tlp tlp-rdw \
     linux-firmware-intel alsa-firmware alsa-utils bluetui brightnessctl
 
 # Enable and start TLP service
@@ -73,12 +73,12 @@ sudo pacman -S --needed pipewire pipewire-pulse wireplumber
 
 # Install additional tools via yay
 print_status "Installing additional tools from AUR..."
-yay -S --noconfirm btop cava fastfetch swappy yazi zathura wlogout
+yay -S --noconfirm btop fastfetch yazi zathura wlogout
 
 # Backup existing configs
 print_status "Backing up existing configurations..."
 mkdir -p ~/.config/backup
-if cp -r ~/.config/{hypr,waybar,kitty,wofi,btop,cava,yazi,zathura} ~/.config/backup/ 2>/dev/null; then
+if cp -r ~/.config/{hypr,waybar,kitty,wofi,btop,yazi,zathura} ~/.config/backup/ 2>/dev/null; then
     print_success "Existing configurations backed up to ~/.config/backup/"
 else
     print_warning "No existing configurations found to backup"

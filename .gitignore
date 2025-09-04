@@ -1,0 +1,14 @@
+# Obsidian caches
+obsidian/
+
+
+# Vesktop caches and session data
+vesktop/sessionData/
+vesktop/Crashpad
+vesktop/Singleton*
+vesktop/state.json
+
+
+# General system files
+*.log
+*.tmp

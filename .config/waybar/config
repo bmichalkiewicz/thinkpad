@@ -34,7 +34,6 @@
             "custom/openbracket",
             "custom/arch",
             "idle_inhibitor",
-            "custom/split",
             "custom/closebracket"
         ]
     },

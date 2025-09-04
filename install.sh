@@ -65,7 +65,7 @@ yay -S --noconfirm ttf-iosevka-nerd ttf-iosevka-nerd-mono
 
 # Install essential packages
 print_status "Installing essential packages..."
-sudo pacman -S --needed hyprland waybar kitty wofi zsh hyprlock stow swaync
+sudo pacman -S --needed hyprland waybar kitty wofi zsh hyprlock hyprpaper stow swaync slurp grim wl-clipboard
 
 # Install PipeWire audio system
 print_status "Installing PipeWire audio system..."

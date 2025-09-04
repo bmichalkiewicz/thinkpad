@@ -196,7 +196,7 @@
       "escape": true
     },
     "network": {
-        "interface": "wlan0",
+        "interface": "wlp0s20f3",
         "format-wifi": "{icon}",
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": "󰖪",

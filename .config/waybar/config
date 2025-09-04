@@ -208,6 +208,6 @@
       "format": "{}",
       "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
       "interval": 5,
-      "on-click": "bluetui"
+      "on-click": "kitty -e bluetui"
     },
 }]

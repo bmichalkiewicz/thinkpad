@@ -16,10 +16,6 @@
     font-family: "Iosevka Nerd Font";
     font-size: 15px;
 }
-#custom-openbracket,
-#custom-closebracket{
-    margin: 0 5px ;
-}
 
 /* idk what all this does */
 window#waybar {
@@ -39,24 +35,27 @@ window#waybar.empty #window {
 /* configuring the modules */
 .modules-left {
     margin: 10px 0 0 10px;
-    padding: 0 0 0 7px;
+    padding: 5px 15px;
     background-color: @background;
     border: 2px solid @focused;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .modules-center {
     margin: 10px 0 0 0;
-    padding: 0 10px 0 10px;
+    padding: 5px 20px;
     background-color: @background;
     border: 2px solid @focused;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .modules-right {
     margin: 10px 10px 0 0;
-    padding: 0 10px 0 10px;
+    padding: 5px 15px;
     background-color: @background;
     border: 2px solid @focused;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -72,10 +71,11 @@ button {
 #custom-arch,
 #custom-powerprofile,
 #custom-themeswitcher{
-    padding-right: 10px;
-    padding-left: 5px;
+    padding: 0 8px;
+    margin: 0 2px;
     font-size: 15px;
-    border-radius: 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 #custom-arch:hover {
     color: @color1;
@@ -89,10 +89,13 @@ button {
 
 /* workspace pannel */
 #workspaces button {
-    padding: 0 2px;
+    padding: 4px 8px;
+    margin: 0 2px;
     background-color: transparent;
     color: @text;
-    border-radius: 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 20px;
 }
 #workspaces button:hover {
     background-color: @second-background;
@@ -129,7 +132,9 @@ button {
 
 /* center module  */
 #window{
-    padding: 0 5px;
+    padding: 0 10px;
+    font-weight: 500;
+    color: @text;
 }
 
 /* Right Island */
@@ -142,7 +147,10 @@ button {
 #custom-clipboard,
 #custom-bluetooth,
 #network {
-  padding: 0 10px ;
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 #clock:hover,
 #battery:hover,
@@ -157,7 +165,10 @@ button {
     color: @color1;
 }
 #idle_inhibitor{
-  padding: 0 10px 0 0;
+  padding: 0 8px;
+  margin: 0 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 #custom-powerprofile{
   padding: 0 8px 0 4px;
@@ -171,9 +182,12 @@ button {
   background-color: @color2;
 }
 #custom-swaync {
-    padding: 0 10px 0 5px;
-    font-size: 16px;       /* same scale as other icons */
+    padding: 0 8px;
+    margin: 0 2px;
+    font-size: 16px;
     color: @text;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 #battery.charging,
 #battery.plugged {

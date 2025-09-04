@@ -15,26 +15,16 @@
     ],
 
 
-    "custom/openbracket": {
-        "format": "[",
-        "tooltip": false
-    },
-    "custom/closebracket": {
-        "format": "]",
-        "tooltip": false
-    },
     "custom/split": {
-      "format": "|",
+      "format": "•",
       "tooltip": false
     },
 
     "group/Utilities":{
         "orientation": "horizontal",
         "modules":[
-            "custom/openbracket",
             "custom/arch",
-            "idle_inhibitor",
-            "custom/closebracket"
+            "idle_inhibitor"
         ]
     },
     "custom/arch": {
@@ -45,9 +35,7 @@
     "group/workspaces":{
         "orientation": "horizontal",
         "modules":[
-            "custom/openbracket",
-            "hyprland/workspaces",
-            "custom/closebracket"
+            "hyprland/workspaces"
         ]
     },
     "hyprland/workspaces": {
@@ -71,9 +59,7 @@
     "group/windows": {
         "orientation":"horizontal",
         "modules":[
-            "custom/openbracket",
-            "hyprland/window",
-            "custom/closebracket"
+            "hyprland/window"
         ]
     },
     "hyprland/window": {
@@ -88,11 +74,9 @@
     "group/cpuram": {
         "orientation": "horizontal",
         "modules": [
-            "custom/openbracket",
             "cpu",
             "custom/split",
-            "memory",
-            "custom/closebracket"
+            "memory"
         ]
     },
     "cpu": {
@@ -135,15 +119,13 @@
     "group/system": {
         "orientation": "horizontal",
         "modules": [
-            "custom/openbracket",
             "clock",
             "custom/split",
             "network",
             "custom/bluetooth",
             "custom/clipboard",
             "battery",
-            "custom/notification",
-            "custom/closebracket"
+            "custom/notification"
         ]
     },
     "clock": {

@@ -4,6 +4,7 @@
 
     "modules-left": [
         "group/Utilities",
+        "custom/split",
         "group/workspaces",
     ],
     "modules-center": [
@@ -34,7 +35,7 @@
          "on-click": "rofi -show drun"
     },
     "custom/updates": {
-        "format": "{} {icon}  ",
+        "format": " {} {icon} ",
         "return-type": "json",
         "format-icons": {
             "has-updates": "󱍷",
@@ -111,7 +112,7 @@
         "onclick" : "kitty -e khal"
     },
     "custom/clipboard": {
-        "format": "",
+        "format": "  ",
         "tooltip": false,
         "on-click": "~/.config/waybar/scripts/clipboard_menu.sh"
     },
@@ -157,7 +158,7 @@
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
     "bluetooth": {
-      "format": "{icon}",
+      "format": " {icon} ",
       "format-icons": ["󰂯", "󰤾", "󰥀", "󰥄", "󰥈"],
 
       "tooltip-format-off": "Bluetooth is off",

@@ -8,6 +8,7 @@
 
 ## **Preview**
 
+![Preview](assets/preview.png)
 
 ---
 
@@ -23,16 +24,12 @@ This rice features a carefully curated collection of tools and configurations:
 - **Hyprland** - Wayland compositor with modular configuration
 - **Waybar** - Status bar with custom modules
 - **swaync** - Notification center with Gruvbox theming
-- **wlogout** - Logout menu
-- **rofi** - Application launcher
+- **rofi** - Application launcher and dMenu
 
 ### **Applications**
 - **kitty** - Terminal emulator with Gruvbox colors
 - **yazi** - File manager with vim-like keybindings
 - **zathura** - PDF viewer
-
-### **Utilities**
-- **zsh** - Shell configuration with aliases and theming
 
 ---
 

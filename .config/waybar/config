@@ -111,7 +111,6 @@
     },
     "clock": {
         "format": "{:%A %H:%M}",
-        "onclick" : "kitty -e khal"
     },
     "custom/clipboard": {
         "format": "  ",
@@ -156,7 +155,7 @@
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": "󰖪",
         "tooltip-format": "{ipaddr}\n{ssid} ({signalStrength}%)",
-        "on-click": "networkmanager_dmenu",
+        "on-click": "kitty -e networkmanager_dmenu",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
     "bluetooth": {

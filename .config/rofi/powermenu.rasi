@@ -1,0 +1,124 @@
+/* --- Configuration for Rofi Power ---- */
+
+/* ---- Configuration ---- */
+configuration {
+    show-icons:                     false;
+}
+
+/* ---- Load pywal colors (custom wal template) ---- */
+@import "gruvbox.rasi"
+
+/* ---- Global Properties ---- */
+* {
+    font:                           "Iosevka Nerd Font Medium 12";
+}
+
+/* ---- Main Window ---- */
+window {
+    location:                       center;
+    anchor:                         center;
+    fullscreen:                     false;
+    width:                          900px;
+    height:                         400px;
+    x-offset:                       0px;
+    y-offset:                       0px;
+    padding:                        0px;
+    border:                         2px;
+    border-radius:                  15px;
+    border-color:                   @yellow;
+    cursor:                         "default";
+    background-color:               rgba(44, 42, 36, 0.95);
+}
+
+/* ---- Main Box ---- */
+mainbox {
+    enabled:                        true;
+    spacing:                        0px;
+    margin:                         0px;
+    padding:                        0px;
+    border:                         0px solid;
+    border-radius:                  0px;
+    border-color:                   @bg1;
+    background-color:               transparent;
+    children:                       [ "inputbar", "listview", "message" ];
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                        true;
+	padding:						20px;
+    background-color:               transparent;
+    orientation:                    horizontal;
+    children:                       ["prompt"];
+}
+
+prompt {
+    enabled:                        true;
+	padding:						10px;
+	border-radius:					15px;
+    border-color:                   @yellow;
+    background-color:               @bg1;
+    text-color:                     @yellow;
+    cursor:                         text;
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                        true;
+    columns:                        3;
+    lines:                          2;
+    cycle:                          true;
+    dynamic:                        true;
+    scrollbar:                      false;
+    layout:                         vertical;
+    reverse:                        false;
+    fixed-height:                   false;
+    fixed-columns:                  true;
+    spacing:                        40px;
+    padding:                        4% 40px;
+    background-color:               transparent;
+    cursor:                         "default";
+    border:                         0px;
+	border-color:                   @active-background;
+}
+
+/* ---- Elements ---- */
+element {
+    enabled:                        true;
+    padding:                        20px;
+    border-radius:                  30px;
+    background-color:               transparent;
+    text-color:                     @fg0;
+    cursor:                         pointer;
+}
+element-text {
+    font:                           "Iosevka Nerd Font SemiBold 16";
+    background-color:               transparent;
+    text-color:                     inherit;
+    cursor:                         inherit;
+    vertical-align:                 0.5;
+    horizontal-align:               0.5;
+}
+element selected.normal {
+    background-color:               @yellow;
+    text-color:                     @bg0;
+}
+element alternate.normal {
+    background-color:               @bg1;
+}
+
+/* ---- Message ---- */
+message {
+    enabled:                        true;
+    margin:                         0px;
+    background-color:               transparent;
+    text-color:                     @fg0;
+    border:                         0px;
+}
+textbox {
+    font:                           "Iosevka Nerd Font SemiBold 8";
+    background-color:               @bg1;
+    text-color:                     @fg0;
+    vertical-align:                 0.5;
+    horizontal-align:               0.5;
+}

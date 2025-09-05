@@ -1,0 +1,200 @@
+* {
+    /* Gruvbox color scheme matching kitty */
+    bg0: #2C2A24;
+    bg1: #3A372F;
+    bg2: #504A3F;
+    bg3: #665C54;
+    bg4: #7C6F64;
+
+    fg0: #DDD5C4;
+    fg1: #A0907A;
+    fg2: #928374;
+    fg3: #665C54;
+    fg4: #504A3F;
+
+    red: #B05A5A;
+    green: #78997A;
+    yellow: #D08B57;
+    blue: #7699A3;
+    purple: #8D7AAE;
+    aqua: #BFAA80;
+
+    gray: #928374;
+
+    background-color: @bg0;
+    border-color: @bg1;
+    separatorcolor: @bg1;
+    scrollbar-handle: @bg2;
+
+    normal-background: @bg0;
+    normal-foreground: @fg0;
+    alternate-normal-background: @bg1;
+    alternate-normal-foreground: @fg0;
+    selected-normal-background: @yellow;
+    selected-normal-foreground: @bg0;
+
+    active-background: @bg0;
+    active-foreground: @blue;
+    alternate-active-background: @bg1;
+    alternate-active-foreground: @blue;
+    selected-active-background: @blue;
+    selected-active-foreground: @bg0;
+
+    urgent-background: @bg0;
+    urgent-foreground: @red;
+    alternate-urgent-background: @bg1;
+    alternate-urgent-foreground: @red;
+    selected-urgent-background: @red;
+    selected-urgent-foreground: @bg0;
+}
+
+window {
+    background-color: @background-color;
+    border: 2;
+    border-color: @yellow;
+    border-radius: 5px;
+    padding: 5;
+}
+
+mainbox {
+    background-color: @background-color;
+    border: 0;
+    padding: 0;
+}
+
+message {
+    background-color: @bg1;
+    border: 2px 0px 0px;
+    border-color: @separatorcolor;
+    padding: 1px;
+}
+
+textbox {
+    background-color: @bg1;
+    text-color: @fg0;
+}
+
+listview {
+    background-color: @background-color;
+    border: 2px 0px 0px;
+    border-color: @separatorcolor;
+    spacing: 2px;
+    scrollbar: true;
+    padding: 2px 0px 0px;
+}
+
+element {
+    background-color: @normal-background;
+    border: 0;
+    padding: 8px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: inherit;
+    size: 1.2em;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+
+scrollbar {
+    background-color: @bg1;
+    handle-color: @scrollbar-handle;
+    handle-width: 8px;
+    border: 0;
+    border-color: @bg1;
+    margin: 0px 0px 0px 5px;
+}
+
+mode-switcher {
+    background-color: @bg1;
+    border: 2px 0px 0px;
+    border-color: @separatorcolor;
+}
+
+button {
+    background-color: @bg1;
+    text-color: @fg1;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+button.selected {
+    background-color: @yellow;
+    text-color: @bg0;
+}
+
+inputbar {
+    background-color: @bg1;
+    text-color: @fg0;
+    padding: 8px 12px;
+    border: 0px 0px 2px;
+    border-color: @separatorcolor;
+}
+
+prompt {
+    background-color: @bg1;
+    text-color: @yellow;
+    padding: 0px 8px 0px 0px;
+}
+
+textbox-prompt-colon {
+    background-color: @bg1;
+    text-color: @yellow;
+    expand: false;
+    str: ":";
+    margin: 0px 0.3em 0em 0em;
+}
+
+entry {
+    background-color: @bg1;
+    text-color: @fg0;
+    placeholder-color: @fg1;
+}

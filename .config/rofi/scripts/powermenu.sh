@@ -4,35 +4,28 @@
 uptime_info=$(uptime -p | sed -e 's/up //g')
 host=$(hostnamectl hostname)
 
-# Options with Icons and Text
+# Options
 options=("Lock" "Suspend" "Logout" "Reboot" "Shutdown" "Hibernate")
-icons=("" "" "󰿅" "󱄌" "" "󰒲")
-
-# Generate options with icons
-options_with_icons=()
-for ((i = 0; i < ${#options[@]}; i++)); do
-    options_with_icons+=("${icons[$i]} ${options[$i]}")
-done
 
 # Execute Command
 run_cmd() {
     case $1 in
-        "")
+        "Lock")
             hyprlock
             ;;
-        "")
+        "Suspend")
             systemctl suspend
             ;;
-        "󰿅")
+        "Logout")
             hyprctl dispatch exit 0
             ;;
-        "󱄌")
+        "Reboot")
             systemctl reboot
             ;;
-        "")
+        "Shutdown")
             systemctl poweroff
             ;;
-        "󰒲")
+        "Hibernate")
             systemctl hibernate
             ;;
         *)
@@ -42,8 +35,8 @@ run_cmd() {
 }
 
 # Display rofi menu and capture selection
-chosen_option=$(printf "%s\n" "${options_with_icons[@]}" | \
-	rofi -dmenu -i -p " $USER@$host" -mesg " Uptime: $uptime_info" \
+chosen_option=$(printf "%s\n" "${options[@]}" | \
+	rofi -dmenu -i -p "$USER@$host" -mesg "Uptime: $uptime_info" \
 	-kb-select-1 "l" \
 	-kb-select-2 "u" \
 	-kb-select-3 "e" \
@@ -54,7 +47,5 @@ chosen_option=$(printf "%s\n" "${options_with_icons[@]}" | \
 
 # Execute selected command
 if [[ -n "$chosen_option" ]]; then
-    # Extract just the icon (first character before the space)
-    icon=$(echo "$chosen_option" | sed 's/ .*//')
-    run_cmd "$icon"
+    run_cmd "$chosen_option"
 fi

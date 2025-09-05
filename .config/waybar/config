@@ -101,6 +101,7 @@
             "network",
             "custom/split",
             "bluetooth",
+            "custom/split",
             "custom/clipboard",
             "custom/split",
             "battery",

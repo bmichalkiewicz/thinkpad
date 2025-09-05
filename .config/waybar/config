@@ -104,7 +104,7 @@
             "clock",
             "custom/split",
             "network",
-            "custom/bluetooth",
+            "bluetooth",
             "custom/clipboard",
             "battery",
             "custom/notification"
@@ -112,8 +112,6 @@
     },
     "clock": {
         "format": "{:%A %H:%M}",
-        "format-alt": "{:%d %B W%V %Y}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "onclick" : "kitty -e khal"
     },
     "custom/clipboard": {
@@ -162,10 +160,18 @@
         "on-click": "kitty -e impala",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
-    "custom/bluetooth": {
-      "format": "{}",
-      "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
-      "interval": 5,
+    "bluetooth": {
+      "format": "{icon}",
+      "format-icons": ["󰂯", "󰤾", "󰥀", "󰥄", "󰥈"],
+
+      "tooltip-format-off": "Bluetooth is off",
+      "tooltip-format-on": "Bluetooth is on",
+
+      "format-connected": "{icon} {num_connections}",
+      "format-connected-battery": "{icon} {device_battery_percentage}%",
+
+      "tooltip-format-connected": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
       "on-click": "kitty -e bluetui"
     },
 }]

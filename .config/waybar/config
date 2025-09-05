@@ -24,6 +24,7 @@
         "orientation": "horizontal",
         "modules":[
             "custom/arch",
+            "custom/split",
             "custom/updates"
         ]
     },
@@ -97,9 +98,11 @@
         "modules": [
             "custom/split",
             "network",
+            "custom/split",
             "bluetooth",
             "custom/clipboard",
             "battery",
+            "custom/split",
             "custom/notification"
         ]
     },

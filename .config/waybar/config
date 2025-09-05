@@ -160,7 +160,7 @@
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
     "bluetooth": {
-      "format": " {icon}",
+      "format": " {icon} ",
       "format-icons": ["󰂯", "󰤾", "󰥀", "󰥄", "󰥈"],
 
       "tooltip-format-off": "Bluetooth is off",

@@ -156,7 +156,7 @@
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": "󰖪",
         "tooltip-format": "{ipaddr}\n{ssid} ({signalStrength}%)",
-        "on-click": "kitty -e impala",
+        "on-click": "networkmanager_dmenu",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
     "bluetooth": {

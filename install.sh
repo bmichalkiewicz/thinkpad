@@ -65,7 +65,7 @@ yay -S --noconfirm ttf-iosevka-nerd ttf-iosevka-nerd-mono
 
 # Install essential packages
 print_status "Installing essential packages..."
-sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard impala
+sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard khal
 
 # Install PipeWire audio system
 print_status "Installing PipeWire audio system..."
@@ -73,12 +73,12 @@ sudo pacman -S --needed pipewire pipewire-pulse wireplumber
 
 # Install additional tools via yay
 print_status "Installing additional tools from AUR..."
-yay -S --noconfirm btop fastfetch yazi zathura waybar-module-pacman-updates-git
+yay -S --noconfirm btop fastfetch yazi zathura waybar-module-pacman-updates-git networkmanager-dmenu-git
 
 # Backup existing configs
 print_status "Backing up existing configurations..."
 mkdir -p ~/.config/backup
-if cp -r ~/.config/{hypr,waybar,kitty,rofi,btop,yazi,zathura} ~/.config/backup/ 2>/dev/null; then
+if cp -r ~/.config/{hypr,waybar,kitty,rofi,btop,yazi,zathura,fastfetch,swaync} ~/.config/backup/ 2>/dev/null; then
     print_success "Existing configurations backed up to ~/.config/backup/"
 else
     print_warning "No existing configurations found to backup"

@@ -33,7 +33,7 @@
          "on-click": "rofi -show drun"
     },
     "custom/updates": {
-        "format": "{} {icon}",
+        "format": "{} {icon}  ",
         "return-type": "json",
         "format-icons": {
             "has-updates": "󱍷",
@@ -69,14 +69,8 @@
     "group/windows": {
         "orientation":"horizontal",
         "modules":[
-            "hyprland/window"
+            "clock"
         ]
-    },
-    "hyprland/window": {
-        "format": "{title}",
-        "max-length": 40,
-        "min-length": 20,
-        "all-outputs": true
     },
     "group/cpuram": {
         "orientation": "horizontal",
@@ -101,7 +95,6 @@
     "group/system": {
         "orientation": "horizontal",
         "modules": [
-            "clock",
             "custom/split",
             "network",
             "bluetooth",

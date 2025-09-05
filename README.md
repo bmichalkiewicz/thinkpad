@@ -24,7 +24,7 @@ This rice features a carefully curated collection of tools and configurations:
 - **Waybar** - Status bar with custom modules
 - **swaync** - Notification center with Gruvbox theming
 - **wlogout** - Logout menu
-- **wofi** - Application launcher
+- **rofi** - Application launcher
 
 ### **Applications**
 - **kitty** - Terminal emulator with Gruvbox colors

@@ -65,7 +65,7 @@ yay -S --noconfirm ttf-iosevka-nerd ttf-iosevka-nerd-mono
 
 # Install essential packages
 print_status "Installing essential packages..."
-sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard
+sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard impala
 
 # Install PipeWire audio system
 print_status "Installing PipeWire audio system..."
@@ -73,7 +73,7 @@ sudo pacman -S --needed pipewire pipewire-pulse wireplumber
 
 # Install additional tools via yay
 print_status "Installing additional tools from AUR..."
-yay -S --noconfirm btop fastfetch yazi zathura
+yay -S --noconfirm btop fastfetch yazi zathura waybar-module-pacman-updates-git
 
 # Backup existing configs
 print_status "Backing up existing configurations..."

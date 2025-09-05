@@ -24,7 +24,7 @@
         "orientation": "horizontal",
         "modules":[
             "custom/arch",
-            "idle_inhibitor"
+            "custom/updates"
         ]
     },
     "custom/arch": {
@@ -32,6 +32,16 @@
          "tooltip": false,
          "on-click": "rofi -show drun"
     },
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪"
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+    }
     "group/workspaces":{
         "orientation": "horizontal",
         "modules":[
@@ -68,9 +78,6 @@
         "min-length": 20,
         "all-outputs": true
     },
-
-
-
     "group/cpuram": {
         "orientation": "horizontal",
         "modules": [
@@ -91,31 +98,6 @@
         "interval": 2,
         "on-click": "kitty -e btop",
     },
-
-    "wireplumber": {
-        "scroll-step": 5,
-        "format": "{icon}{volume}%",
-        "format-bluetooth": "{icon}{volume}% ",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [" :", " :", " :"]
-        },
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "pavucontrol"
-    },
-    "backlight": {
-        "format": "{icon}:{percent}%",
-        "format-icons": ["", "", "🌙"],
-        "on-click": "~/.config/waybar/scripts/brightness_slider.sh"
-    },
-
     "group/system": {
         "orientation": "horizontal",
         "modules": [
@@ -129,9 +111,10 @@
         ]
     },
     "clock": {
-        "format": "{:%I:%M}",
+        "format": "{:%A %H:%M}",
+        "format-alt": "{:%d %B W%V %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "onclick" : "kalender"
+        "onclick" : "kitty -e khal"
     },
     "custom/clipboard": {
         "format": "",
@@ -149,13 +132,6 @@
         "format-plugged": "  {capacity}%",
         "format-icons": ["", "", "", "", ""],
         "on-click": "~/.config/rofi/scripts/powermenu.sh"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
     },
     "custom/notification": {
       "tooltip": false,
@@ -183,7 +159,7 @@
         "format-ethernet": "󰈀 LAN",
         "format-disconnected": "󰖪",
         "tooltip-format": "{ipaddr}\n{ssid} ({signalStrength}%)",
-        "on-click": "kitty -e nmtui",
+        "on-click": "kitty -e impala",
         "format-icons": [ "󰤯", "󰤟", "󰤢", "󰤥", "󰤨" ]
     },
     "custom/bluetooth": {

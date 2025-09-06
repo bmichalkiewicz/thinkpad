@@ -37,7 +37,7 @@ print_status "Starting ThinkPad rice installation..."
 # Install drivers and system components
 print_status "Installing drivers and system components..."
 sudo pacman -S --needed mesa vulkan-intel sof-firmware tlp tlp-rdw \
-    linux-firmware-intel alsa-firmware alsa-utils bluetui brightnessctl
+    linux-firmware-intel alsa-firmware alsa-utils bluetui brightnessctl greetd
 
 # Enable and start TLP service
 print_status "Enabling TLP power management..."
@@ -65,7 +65,7 @@ yay -S --noconfirm ttf-iosevka-nerd ttf-iosevka-nerd-mono
 
 # Install essential packages
 print_status "Installing essential packages..."
-sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard khal
+sudo pacman -S --needed cliphist hyprland waybar kitty rofi zsh hyprlock hypridle hyprpaper stow swaync slurp grim wl-clipboard
 
 # Install PipeWire audio system
 print_status "Installing PipeWire audio system..."

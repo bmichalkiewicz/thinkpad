@@ -25,7 +25,7 @@ window {
     padding:                        0px;
     border:                         2px;
     border-radius:                  15px;
-    border-color:                   @yellow;
+    border-color:                   @orange;
     cursor:                         "default";
     background-color:               rgba(44, 42, 36, 0.95);
 }
@@ -56,9 +56,9 @@ prompt {
     enabled:                        true;
 	padding:						10px;
 	border-radius:					15px;
-    border-color:                   @yellow;
+    border-color:                   @orange;
     background-color:               @bg1;
-    text-color:                     @yellow;
+    text-color:                     @orange;
     cursor:                         text;
 }
 
@@ -87,7 +87,7 @@ element {
     enabled:                        true;
     padding:                        20px;
     border-radius:                  30px;
-    background-color:               transparent;
+    background-color:               @bg1;
     text-color:                     @fg0;
     cursor:                         pointer;
 }
@@ -100,7 +100,7 @@ element-text {
     horizontal-align:               0.5;
 }
 element selected.normal {
-    background-color:               @yellow;
+    background-color:               @orange;
     text-color:                     @bg0;
 }
 element alternate.normal {

@@ -1,23 +1,24 @@
 * {
-    /* Gruvbox color scheme matching kitty */
-    bg0: #2C2A24;
-    bg1: #3A372F;
-    bg2: #504A3F;
+    /* Vibrant Gruvbox color scheme matching waybar/hyprland */
+    bg0: #282828;
+    bg1: #3C3836;
+    bg2: #504945;
     bg3: #665C54;
     bg4: #7C6F64;
 
-    fg0: #DDD5C4;
-    fg1: #A0907A;
-    fg2: #928374;
-    fg3: #665C54;
-    fg4: #504A3F;
+    fg0: #EBDBB2;
+    fg1: #D5C4A1;
+    fg2: #BDAE93;
+    fg3: #A89984;
+    fg4: #928374;
 
-    red: #B05A5A;
-    green: #78997A;
-    yellow: #D08B57;
-    blue: #7699A3;
-    purple: #8D7AAE;
-    aqua: #BFAA80;
+    red: #FB4934;
+    green: #B8BB26;
+    yellow: #FABD2F;
+    blue: #83A598;
+    purple: #D3869B;
+    aqua: #8EC07C;
+    orange: #FE8019;
 
     gray: #928374;
 
@@ -30,7 +31,7 @@
     normal-foreground: @fg0;
     alternate-normal-background: @bg1;
     alternate-normal-foreground: @fg0;
-    selected-normal-background: @yellow;
+    selected-normal-background: @orange;
     selected-normal-foreground: @bg0;
 
     active-background: @bg0;
@@ -51,8 +52,8 @@
 window {
     background-color: @background-color;
     border: 2;
-    border-color: @yellow;
-    border-radius: 5px;
+    border-color: @orange;
+    border-radius: 10px;
     padding: 5;
 }
 
@@ -167,7 +168,7 @@ button {
 }
 
 button.selected {
-    background-color: @yellow;
+    background-color: @orange;
     text-color: @bg0;
 }
 
@@ -181,13 +182,13 @@ inputbar {
 
 prompt {
     background-color: @bg1;
-    text-color: @yellow;
+    text-color: @orange;
     padding: 0px 8px 0px 0px;
 }
 
 textbox-prompt-colon {
     background-color: @bg1;
-    text-color: @yellow;
+    text-color: @orange;
     expand: false;
     str: ":";
     margin: 0px 0.3em 0em 0em;

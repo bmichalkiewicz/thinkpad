@@ -1,10 +1,9 @@
 [{
-    "height": 56,
-    "spacing": 5,
+    "height": 32,
+    "spacing": 0,
 
     "modules-left": [
         "group/Utilities",
-        "custom/split",
         "clock",
     ],
     "modules-center": [
@@ -23,7 +22,6 @@
         "orientation": "horizontal",
         "modules":[
             "custom/arch",
-            "custom/split",
             "custom/updates"
         ]
     },
@@ -66,7 +64,6 @@
         "orientation": "horizontal",
         "modules": [
             "cpu",
-            "custom/split",
             "memory"
         ]
     },
@@ -85,15 +82,10 @@
     "group/system": {
         "orientation": "horizontal",
         "modules": [
-            "custom/split",
             "network",
-            "custom/split",
             "bluetooth",
-            "custom/split",
             "custom/clipboard",
-            "custom/split",
             "battery",
-            "custom/split",
             "custom/notification"
         ]
     },

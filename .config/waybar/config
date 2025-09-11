@@ -4,7 +4,7 @@
 
     "modules-left": [
         "group/Utilities",
-        "clock",
+        "clock"
     ],
     "modules-center": [
         "group/workspaces"
@@ -51,6 +51,9 @@
       "warp-on-scroll": true,
       "enable-bar-scroll": true,
       "disable-scroll-wraparound": false,
+      "persistent-workspaces": {
+        "*": ["1", "2", "3"]
+      },
       "format": " {icon} ",
       "format-icons": {
         "active": "●",
